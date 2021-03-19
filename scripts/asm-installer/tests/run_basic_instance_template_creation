@@ -30,7 +30,7 @@ verify_template_instance_with_custom_image() {
   create_new_instance_template "${CUSTOM_SOURCE_INSTANCE_TEMPLATE_NAME}"; RETVAL=$?;
   trap 'delete_instance_template "${CUSTOM_SOURCE_INSTANCE_TEMPLATE_NAME}"' ERR
 
-  INSTANCE_TEMPLATE_NAME=${CUSTOM_SOURCE_INSTANCE_TEMPLATE_NAME}
+  INSTANCE_TEMPLATE_NAME="${CUSTOM_SOURCE_INSTANCE_TEMPLATE_NAME}"
   verify_instance_template_with_source
 
   delete_instance_template "${INSTANCE_TEMPLATE_NAME}"
